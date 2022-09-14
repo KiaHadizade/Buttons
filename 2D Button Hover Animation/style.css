@@ -1,0 +1,48 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 98vh;
+}
+.btn {
+    width: 300px;
+    height: 100px;
+    text-transform: capitalize;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: xx-large;
+    font-weight: 500;
+    text-decoration: none;
+    position: relative;
+}
+.text-1,
+.text-2 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-origin: 50% 50% -50px;
+    /* transform-origin: 50% 50%; */
+    transition: all .3s;
+}
+.text-1 {
+    transform: rotateX(0deg);
+    background-color: #292929;
+    color: #fff;
+}
+.text-2 {
+    transform: rotateX(90deg);
+    background-color: #eee;
+    color: #131313;
+}
+.text-2 i {
+    margin-left: 5px;
+    transform: translateY(10%);
+}
+.btn:hover .text-1 {
+    transform: rotateX(-90deg);
+}
+.btn:hover .text-2 {
+    transform: rotateX(0deg);
+}

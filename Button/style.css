@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #272B2C;
+}
+.btn-outline {
+    text-decoration: none;
+    font-size: 1em;
+    color: rgb(118, 109, 244);
+    padding: 10px 30px;
+    border: 2px solid rgb(118, 109, 244);
+    position: relative;
+    transition: .5s;
+}
+.btn-outline::before,
+.btn-outline::after {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border: inherit;
+    transition: .5s;
+}
+.btn-outline::before {
+    top: -10px;
+    left: -10px;
+    border-width: 2px 0 0 2px;
+}
+.btn-outline::after {
+    bottom: -10px;
+    right: -10px;
+    border-width: 0 2px 2px 0;
+}
+.btn-outline:hover::before,
+.btn-outline:hover::after {
+    width: calc(100% + 18px);
+    height: calc(100% + 18px);
+}
